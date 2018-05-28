@@ -6,9 +6,7 @@ import os
 file = sys.argv[1] + sys.argv[2] + '.sqlite'
 database = sys.argv[2] + '.sqlite'
 
-if sys.argv[2] == 'production' or sys.argv[2] == 'testing':
-    pass
-else:
+if not (sys.argv[2] == 'production' or sys.argv[2] == 'testing'):
     print("Invalid target!")
     exit(1)
 
